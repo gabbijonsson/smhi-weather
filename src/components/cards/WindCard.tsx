@@ -26,9 +26,7 @@ const chartConfig = {
 
 export default function WindCard() {
   const { selectedCityLocation } = useCity();
-  // TODO: Handle errors
-  const { windSpeed, gust, error, isLoading } =
-    useWeather(selectedCityLocation);
+  const { windSpeed, gust, isLoading } = useWeather(selectedCityLocation);
 
   const data = windSpeed?.map((wind) => {
     const gustEntry = gust?.find((g) => g.time === wind.time);

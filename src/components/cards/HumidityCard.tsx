@@ -6,8 +6,7 @@ import useWeather from "@/hooks/useWeather";
 
 export default function HumidityCard() {
   const { selectedCityLocation } = useCity();
-  // TODO: Handle errors
-  const { humidity, error, isLoading } = useWeather(selectedCityLocation);
+  const { humidity, isLoading } = useWeather(selectedCityLocation);
 
   return (
     <WeatherCard

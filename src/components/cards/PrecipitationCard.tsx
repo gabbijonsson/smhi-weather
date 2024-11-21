@@ -14,8 +14,7 @@ const chartConfig = {
 
 export default function PrecipitationCard() {
   const { selectedCityLocation } = useCity();
-  // TODO: Handle errors
-  const { precipitation, error, isLoading } = useWeather(selectedCityLocation);
+  const { precipitation, isLoading } = useWeather(selectedCityLocation);
 
   const highestPrecipitation = precipitation?.reduce(
     (max, t) => (t.precipitation > max ? t.precipitation : max),

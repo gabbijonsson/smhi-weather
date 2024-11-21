@@ -18,8 +18,7 @@ const chartConfig = {
  */
 export default function PressureCard() {
   const { selectedCityLocation } = useCity();
-  // TODO: Handle errors
-  const { airPressure, error, isLoading } = useWeather(selectedCityLocation);
+  const { airPressure, isLoading } = useWeather(selectedCityLocation);
 
   return (
     <WeatherCard

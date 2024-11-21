@@ -6,8 +6,7 @@ import { useCity } from "@/CityDataContext";
 
 export default function CloudCoverCard() {
   const { selectedCityLocation } = useCity();
-  // TODO: Handle errors
-  const { cloudCover, error, isLoading } = useWeather(selectedCityLocation);
+  const { cloudCover, isLoading } = useWeather(selectedCityLocation);
 
   return (
     <WeatherCard

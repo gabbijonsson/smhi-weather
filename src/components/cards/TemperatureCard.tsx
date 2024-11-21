@@ -14,8 +14,7 @@ const chartConfig = {
 
 export default function TemperatureCard() {
   const { selectedCityLocation } = useCity();
-  // TODO: Handle errors
-  const { temperature, error, isLoading } = useWeather(selectedCityLocation);
+  const { temperature, isLoading } = useWeather(selectedCityLocation);
 
   const highestTemperature = temperature?.reduce(
     (max, t) => (t.temperature > max ? t.temperature : max),
